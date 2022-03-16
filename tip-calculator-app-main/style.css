@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+:root{
+   --Strongcyan: hsl(172, 67%, 45%);
+   --Verydarkcyan: hsl(183, 100%, 15%);
+   --Darkgrayishcyan: hsl(186, 14%, 43%);
+   --Grayishcyan: hsl(184, 14%, 56%);
+   --Lightgrayishcyan: hsl(185, 41%, 84%);
+   --Verylightgrayishcyan: hsl(189, 41%, 97%);
+   --White: hsl(0, 0%, 100%);
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Space Mono', monospace;
+   font-weight: 700;
+   color: var(--Grayishcyan);
+}
+
+body{
+   display: flex;
+   width: 100%;
+   height: 100vh;
+   background: var(--Lightgrayishcyan);
+   justify-content: center;
+   align-items: center;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 1440px;
+   height: 100%;
+}
+.container .title{
+   margin-bottom: 50px;
+}
+.title h1{
+   color: var(--Verydarkcyan);
+   text-transform: uppercase;
+   letter-spacing: 1rem;
+}
+
+.tip-calculator{
+   display: flex;
+   align-items: center;
+   width: 900px;
+   height: 400px;
+   padding: 20px;
+   background: var(--White);
+   border-radius: 20px;
+}
+.form-tip{
+   width: 50%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: 20px;
+   margin: 10px;
+}
+
+.form-tip .bill{
+   display: flex;
+   flex-direction: column;
+   color: var(--Grayishcyan);
+}
+
+.bill input{
+   height: 40px;
+   background: var(--Verylightgrayishcyan);
+   border: none;
+   outline: none;
+   text-align: end;
+   font-size: 24px;
+   color: var(--Verydarkcyan);
+   padding: 5px 10px;
+   margin-top:1rem;
+   border-radius: 5px;
+   cursor: pointer;
+   background: url(/images/icon-dollar.svg) no-repeat center left;
+   background-position-x: 10px;
+}
+.form-tip .bill input:focus{
+   border: 2px solid var(--Strongcyan);
+}
+.form-tip .bill input:hover{
+   border: 2px solid var(--Strongcyan);
+}
+::-webkit-input-placeholder{
+   color: var(--Grayishcyan);
+}
+
+.form-tip .grid-input{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 10px;
+}
+
+.form-grid label{
+   color: var(--Grayishcyan);
+   margin-bottom: 2rem;
+}
+.grid-input{
+   margin-top: 1rem;
+}
+
+.grid-input input[type="button"]{
+   width: 90px;
+   height: 35px;
+   background: var(--Verydarkcyan);
+   border-radius: 5px;
+   color: var(--White);
+   font-size: 20px;
+   text-align: center;
+   border: none;
+   cursor: pointer;
+}
+
+.grid-input input[type="button"]:hover{
+   background: var(--Lightgrayishcyan);
+   color: var(--Verydarkcyan);
+}
+.grid-input button[type="button"]:focus{
+      background: var(--Strongcyan);
+      color: var(--Verydarkcyan);
+}
+.grid-input input[type="text"]{
+   width: 90px;
+   text-align: end;
+   border: none;
+   background: var(--Verylightgrayishcyan);
+   color: var(--Verydarkcyan);
+   font-size: 19px;
+   outline: none;
+   cursor: pointer;
+   padding: 0 5px;
+   border-radius: 5px;
+}
+
+.grid-input input[type="text"]:focus{
+   border: 2px solid var(--Strongcyan)
+}
+.grid-input input[type="text"]:hover{
+   border: 2px solid var(--Strongcyan)
+}
+.grid-input input[type="text"]::-webkit-input-placeholder{
+   color: var(--Verydarkcyan);
+   text-align: center;
+}
+
+
+
+.people{
+   display: flex;
+   flex-direction: column;
+   color: var(--Grayishcyan);
+}
+.people input{
+   height: 40px;
+   background: var(--Verylightgrayishcyan);
+   border: none;
+   outline: none;
+   text-align: end;
+   font-size: 24px;
+   color: var(--Verydarkcyan);
+   padding: 5px 10px;
+   margin-top:1rem;
+   border-radius: 5px;
+   background: url(/images/icon-person.svg) no-repeat center left;
+   background-position-x: 10px;
+   cursor: pointer;
+}
+.form-tip .people input:focus{
+   border: 2px solid var(--Strongcyan);
+}
+.form-tip .people input:hover{
+   border: 2px solid var(--Strongcyan);
+}
+
+.output-zone{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   width: 50%;
+   height: 100%;
+   background: var(--Verydarkcyan);
+   border-radius: 20px;
+   padding: 40px;
+   margin: 10px;
+}
+
+.show-text{
+   width: 100%;
+}
+.tip-amount{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+   margin-bottom: 1rem;
+   align-items: center;
+}
+.tip-amount .tip-left h4{
+   font-size: 16px;
+   color: var(--White);
+}
+.tip-amount .tip-left span{
+   font-size: 14px;
+   color: var(--Grayishcyan);
+}
+.tip-amount .tip-right h1{
+   color: var(--Strongcyan);
+   font-size: 40px;
+}
+.total{
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+.total .total-left h4{
+   font-size: 16px;
+   color: var(--White);
+}
+.total .total-left span{
+   color: var(--Grayishcyan);
+   font-size: 14px;
+}
+.total .total-right h1{
+   color: var(--Strongcyan);
+   font-size: 40px;
+}
+
+.reset{
+   width: 100%;
+}
+.reset button{
+   width: 100%;
+   padding: 10px 0;
+   border-radius: 5px;
+   border: none;
+   background: var(--Strongcyan);
+   color: var(--Verydarkcyan);
+   font-size: 24px;
+   cursor: pointer;
+}
+.reset button:hover{
+   background: var(--Lightgrayishcyan);
+}
+
+@media only screen and (max-width:375px){
+   body{
+      display: flex;
+      width: 100%;
+      height: auto;
+   }
+   .container{
+      width: 375px;
+      height: auto;
+      padding: 50px 0 0 0;
+   }
+   .container .title{
+      margin-bottom: 50px;
+   }
+   .title h1{
+      color: var(--Verydarkcyan);
+      text-transform: uppercase;
+      letter-spacing: 0.6rem;
+   }
+   .tip-calculator{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding: 0;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+   }
+   .form-tip{
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+   }
+   .form-tip .bill{
+      margin-bottom: 30px;
+   }
+   .bill input{
+      background: var(--Verylightgrayishcyan);
+   }
+   .form-tip .grid-input{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+      margin-bottom: 30px;
+   }
+   .grid-input input[type="button"]{
+      width: 100%;
+      height: 40px;
+   }
+   .grid-input input[type="text"]{
+      width: 100%;
+      height: 40px;
+   }
+   .people input{
+      background: var(--Verylightgrayishcyan);
+   }
+
+   .output-zone{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: auto;
+      border-radius: 30px;
+      margin: 0;
+   }
+   .reset button{
+      width: 100%;
+      padding: 10px 0;
+      margin-top: 20px;
+   }
+}

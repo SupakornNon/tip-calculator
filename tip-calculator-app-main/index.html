@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">
+      <h1>spli <br>tter</h1>
+    </div>
+
+    <div class="tip-calculator">
+      <form class="form-tip">
+        <div class="bill">
+          <label for="bill">Bill</label>
+          <input type="text" id="bill" name="bill" placeholder="0" value="">
+        </div>
+
+        <div class="form-grid">
+          <label for="grid-input">Select Tip %</label>
+          <div class="grid-input">
+            <input type="button" id="fiveper" value="5%" onclick="fivePercen()">
+            <input type="button" id="tenper"value="10%" onclick="tenPercen()">
+            <input type="button" id="fifteenper" value="15%" onclick="fifteenPercen()">
+            <input type="button"  id="twentyfiveper" value="25%" onclick="twentyfivePercen()">
+            <input type="button" id="fiftyper" value="50%" onclick="fiftyPercen()">
+            <input type="text" id="custom" placeholder="Custom" value="" onchange="customPercen()">
+        </div>
+        </div>
+        
+        
+        <div class="people">
+          <label for="inp-people">Number of People</label>
+        <input type="text" id="inp-people" name="inp-people" placeholder="0" value="">
+        </div>
+      </form>
+
+      <div class="output-zone">
+        <div class="show-text">
+          <div class="tip-amount">
+            <div class="tip-left">
+              <h4>Tip Amount</h4>
+              <span>/ person</span>
+            </div>
+            <div class="tip-right">
+              <h1 class="resulttip">$0.00</h1>
+            </div>
+          </div>
+          <div class="total">
+            <div class="total-left">
+              <h4>Total</h4>
+              <span>/ person</span>
+            </div>
+            <div class="total-right">
+              <h1 class="resulttotal">$0.00</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="reset">
+          <button class="reset-btn" type="submit" onclick="reset()">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+
+  <!-- Bill
+
+  Select Tip %
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+   -->
+
+</body>
+</html>
